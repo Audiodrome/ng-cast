@@ -13,7 +13,7 @@ angular.module('video-player')
       // console.log(ctrl, 'ctrl');
       // console.log('I made it');
       // console.log(videoSelected, 'the selected video');
-      this.currentVideo = videoSelected;
+      ctrl.currentVideo = videoSelected;
       // console.log(ctrl.currentVideo, 'SELECTED VIDEO')
     };
     this.searchResults = function() {};
