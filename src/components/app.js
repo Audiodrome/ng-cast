@@ -1,19 +1,17 @@
-// var AppCtrl = function($scope) {
-
-//   this.dummies = window.exampleVideoData;
-// };
-
 angular.module('video-player')
 
 .component('app', {
   // TODO
-  templateUrl: 'src/templates/app.html',
-  controller: AppCtrl,
-  bindings: {
-    dummies: '<'
-  }
-});
 
-// function AppCtrl($scope) {
-//   this.dummies = window.exampleVideoData;
-// }
+  controller: function() {
+    this.videos = window.exampleVideoData;
+    
+    this.currentVideo = this.videos[0];
+    // console.log(this.currentVideo);
+    this.selectVideo = () => {};
+    this.searchResults = () => {};
+  },
+  templateUrl: 'src/templates/app.html',
+
+
+});
