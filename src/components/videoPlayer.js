@@ -5,12 +5,8 @@ angular.module('video-player')
   bindings: {
     currentVideo: '<'
   },
-  controller: function($sce) {
-// var ctrl = this;
-    var a = $sce.trustAsHtml('sting');
-    console.log(a);
-    // this.id = $sce.trustAsHtml(this.currentVideo.id.videoId)
-    console.log();
+  controller: function() {
+    console.log(this.currentVideo, 'videoplayer');
   },
   templateUrl: 'src/templates/videoPlayer.html'
 });
