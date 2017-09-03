@@ -4,7 +4,12 @@ angular.module('video-player')
   // TODO
   controller: function() {
     this.input = '';
-
+    this.result = function() {
+      this.query = this.input;
+      
+      console.log(this.query);
+      this.input = '';
+    };
     this.storeQuery = function() {
       this.query = this.input;
       this.input = '';

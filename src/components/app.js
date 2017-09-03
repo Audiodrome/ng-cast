@@ -9,8 +9,6 @@ angular.module('video-player')
 
     var ctrl = this;
     this.selectVideo = function(videoSelected) {
-      // console.log(this, 'this');
-      // console.log(ctrl, 'ctrl');
       // console.log('I made it');
       // console.log(videoSelected, 'the selected video');
       ctrl.currentVideo = videoSelected;
