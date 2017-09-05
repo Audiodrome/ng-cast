@@ -3,20 +3,20 @@ angular.module('video-player')
 .component('app', {
   // TODO
 
-  controller: function() {
-    this.videos = window.exampleVideoData;
-    this.currentVideo = this.videos[0];
-
+  controller: function($scope, youTube) {
     var ctrl = this;
+
+    youTube.search('javascript tutorial').then(function(data) {
+      ctrl.videos = data.data.items;
+      ctrl.currentVideo = data.data.items[0];
+    });
     this.selectVideo = function(videoSelected) {
-      // console.log('I made it');
-      // console.log(videoSelected, 'the selected video');
-      ctrl.currentVideo = videoSelected;
-      // console.log(ctrl.currentVideo, 'SELECTED VIDEO')
+      ctrl.currentVideo = videoSelected; 
     };
-    this.searchResults = function() {};
+    this.searchResults = function(youtubeFive) {
+      ctrl.videos = youtubeFive;
+      ctrl.currentVideo = ctrl.videos[0];
+    };
   },
   templateUrl: 'src/templates/app.html',
-
-
 });
